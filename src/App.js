@@ -10,11 +10,6 @@ class App extends Component {
     return ( 
       <React.Fragment>
         <NavBar/>
-        <main>
-          <Content>
-          </Content>          
-        </main>
-
       </React.Fragment>
      );
   }

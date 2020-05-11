@@ -40,8 +40,7 @@ class NavBar extends Component {
 							</div>
 						</div>
 					</nav>
-					<hr />
-					<Switch>
+					<Switch className="switch">
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/compare" component={Compare} />
 						<Route exact path="/covid19" component={Covid19} />
