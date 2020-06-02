@@ -4,42 +4,88 @@ import { Bar as BarChart } from 'react-chartjs-2';
 import '../covid19.css';
 
 defaults.global.maintainAspectRatio = false;
+const wordFreq_LineGraph = {
+	labels:  ['account','thanks','help','back','call','sorry','bank','customer','banking','card','link','message','phone','loan','branch','number','online','payment','team','application','email','code','service','send','check','detail','credit','working','reply','post'],
+	datasets: [
+		{
+			label: 'Frequent Words',
+			data: [119,62,59,59,58,52,47,44,44,44,41,34,34,34,34,33,31,31,31,30,29,29,27,26,26,26,25,25,23,23],
+			fill: true,
+			backgroundColor: 'rgba(103, 163,163, 0.7)',
+			borderColor: 'rgba(88, 122, 122,1)'
+		}
+	]
+};
+
+const wordFreq_options_LineGraph = {
+	title: {
+		display: false,
+		// text: 'Banking related Tweets Trend'
+	},
+	scales: {
+		yAxes: [
+			{
+				ticks: {
+					suggestedMin: 0,
+					suggestedMax: 100
+				}
+			}
+		]
+	},
+	maintainAspectRatio: false
+};
+
+const wordFreq_legend_LineGraph = {
+	display: true,
+	position: 'bottom',
+	labels: {
+		fontColor: '#323130',
+		fontSize: 14
+	}
+};
+
+
+// line chart- covid vs all
+
+defaults.global.maintainAspectRatio = false;
 const data_LineGraph = {
-	labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
+	labels:  ['Febraury','March','April','May'],
 	datasets: [
 		{
 			label: 'All tweets',
-			data: [ 227, 195 ,591, 724, 463, 408],
+			data: [ 2949,7031,4509,5773],
 			fill: true,
-			backgroundColor: 'rgba(75,192,192,0.2)',
-			borderColor: 'rgba(75,192,192,1)'
+			backgroundColor: 'rgba(103, 163,163, 0.7)',
+			borderColor: 'rgba(103, 163, 163,1)'
 		},
 		{
 			label: 'Covid-19 tweets',
-			data: [ 0, 5, 18, 21, 14, 4],
-			fill: false,
-			borderColor: '#742774'
+			data: [ 1,366,154,134],
+			fill: true,
+			// borderColor: '#742774'
+			borderColor: 'rgba(88, 122, 122,1)',
+            backgroundColor:'rgba(88, 122, 122,0.8)'
 		}
 	]
 };
 
 const data_StackedBar = {
-	labels: ['Week 1','Week 2','Week 3','Week 4','Week 5','Week 6'],
+	labels: ['Febraury','March','April','May'],
 	datasets: [
 		{
-			label: 'Positive',
-			data: [67.8,55,45,80,20,50],
+			label: 'Positive Tweets',
+			data:  [1,166,60,56],
 			// backgroundColor: '#742774' // green
 			backgroundColor:'#414f4f'
 		},
 		{
-			label: 'Negative',
-			data: [20.7,11,44,20,55,30],
+			label: 'Negative Tweets',
+			data: [0,80,25,20],
 			backgroundColor: '#587a7a' // yellow
 		},
 		{
-			label: 'Neutral',
-			data: [11.4,33,10,10,46,60],
+			label: 'Neutral Tweets',
+			data:[0,120,59,58],
 			backgroundColor: '#67a3a3' // red
 		}
 	]
@@ -115,15 +161,15 @@ class Covid19 extends Component {
 
 					<div className="quater" id="div3">
 						<div class="container text-center ">
-							<p style={mystyle}> Polarity of Covid-19 Tweets</p>
+							<p style={mystyle}> Distribution of frequently used terms</p>
 						</div>
-						<div className="image-container">
-							<img src={ require('../images/covidWF.png') }/>
+						<div className="chart-container">
+							<Line data={wordFreq_LineGraph} legend={wordFreq_legend_LineGraph} options={wordFreq_options_LineGraph} />
 						</div>
 					</div>
 					<div className="quater" id="div4">
 						<div class="container text-center ">
-							<p style={mystyle}> Polarity of Covid-19 Tweets</p>
+							<p style={mystyle}> Word Cloud of frequently used terms</p>
 						</div>
 						<div className="image-container">
 							<img src={ require('../images/covidWC.png') }/>

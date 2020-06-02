@@ -11,11 +11,11 @@ class NavBar extends Component {
 		return (
 			<Router>
 				<div>
-					<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+					<nav className="navbar navbar-expand-md navbar-dark bg-dark">
 						<a class="navbar-brand" href="#">
 							Twitter Dashboard
 						</a>
-						<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 							<div class="navbar-nav">
 								<a class="nav-item nav-link active" href="#">
 									<Link to={'/home'} className="nav-link">

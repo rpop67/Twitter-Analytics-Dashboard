@@ -1,0 +1,88 @@
+
+  .caption {
+    margin-left:30px;
+  }
+
+  .carouselBody1{
+    
+      position:fixed;
+      height:70%;
+      margin-left:60px;
+      width:90%;
+      margin-right:20px;
+      margin-top:20px;
+      margin-bottom:50px;
+      padding:10px;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .carousel1{
+      position:fixed;
+      margin:30px;
+      height:100%;
+  }
+
+  .carouselItemBody1{
+    
+      height:100%;
+      width:70%;
+  }
+
+  .carouselCaptionBody1{
+      align-self: baseline;
+      height:100%;
+  }
+
+  .chartBody1{
+    margin-left:40px;
+    margin-top:20px;
+    align-content: center;
+      align-items: center;
+      justify-items: center;
+      padding-left:40px;
+
+  }
+
+  .chartBodyCompare1{
+    width:100%;
+    min-height: fit-content;
+    min-width: fit-content;
+    justify-self: center;
+  margin-left:170px;
+  margin-top:30px;
+
+  }
+
+  .chartBar1{
+    width:100%;
+    min-height: fit-content;
+    min-width: fit-content;
+    justify-self: center;
+  margin-left:170px;
+  margin-top:20px;
+  }
+
+  .chartBar2{
+    width:100%;
+    min-height: fit-content;
+    min-width: fit-content;
+    justify-self: center;
+  margin-left:170px;
+  margin-top:20px;
+  }
+
+  .carousel-control-prev{
+      color:#000;
+      background-color: #dedede83;
+  }
+
+  .carousel-control-next{
+      color:#000;
+      background-color: #dedede83;
+  }
+
+  .lineChart1{
+   background-color:hsl(180, 25%, 52%)
+      
+  }

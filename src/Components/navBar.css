@@ -1,11 +1,14 @@
 
 
 .dashboardWrapper {
+  position:fixed;
   display: flex;
   flex-direction: column;
-  height:100%;
+  height:10%;
 }
 
 .switch {
+  display:flex;
+  position:fixed;
   flex-grow: 1;
 }
