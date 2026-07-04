@@ -4,6 +4,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## Xquik Metrics Adapter
+
+`src/Components/xquikMetrics.js` converts Xquik tweet exports into the
+dashboard's existing Chart.js sentiment shape.
+
+```javascript
+import {
+  createXquikSentimentDoughnut,
+  summarizeXquikTweets
+} from './Components/xquikMetrics';
+
+const tweets = [
+  { text: 'Great service', sentiment: 'positive' },
+  { text: 'Needs support', sentiment: 'negative' }
+];
+
+const chartData = createXquikSentimentDoughnut(summarizeXquikTweets(tweets));
+```
+
+The existing dashboard uses the adapter with the current sample summary, so a
+future Xquik-backed fetch can replace only the data input without changing the
+chart components.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
