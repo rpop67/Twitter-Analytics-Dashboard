@@ -2,19 +2,9 @@ import React, { Component } from 'react';
 import '../home.css';
 import Carousel from 'react-bootstrap/Carousel';
 import {Doughnut,Line} from 'react-chartjs-2';
+import { createXquikSentimentDoughnut } from './xquikMetrics';
 
-const state = {
-	labels: ['Positive Tweets', 'Negative Tweets', 'Neutral Tweets'],
-	datasets: [
-		{
-			label: ['Positive','Negative','Neutral'],
-			backgroundColor: ['#414f4f', '#587a7a', '#67a3a3'],
-			hoverBackgroundColor: ['#3a9e6c', '#d43c3c', '#272928'],
-			data: [14466, 6267, 11431],
-			
-		}
-	]
-};
+const state = createXquikSentimentDoughnut();
 
 
 // #LineChart----- polarity trend
